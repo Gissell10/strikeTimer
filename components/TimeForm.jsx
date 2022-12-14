@@ -18,8 +18,6 @@ export default function TimeForm(props) {
   return (
     <div>
       <form onSubmit={onTrigger}>
-        <label>Rounds</label>
-        <input type="number" min="0" max="10" name="rounds" defaultValue="1" />
         <label>Wort Time</label>
         <label>Minutes</label>
         <input
@@ -48,6 +46,9 @@ export default function TimeForm(props) {
           name="secBreak"
           defaultValue="0"
         />
+        <label>Rounds</label>
+        <input type="number" min="0" max="10" name="rounds" defaultValue="1" />
+
         <button type="submit">Start</button>
       </form>
     </div>
