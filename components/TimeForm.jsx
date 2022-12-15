@@ -70,7 +70,7 @@ export default function TimeForm(props) {
           </div>
         </div>
         <p>Rounds</p>
-        <div className={styles.timers}>
+        <div>
           <label> # Rounds</label>
           <input
             type="number"

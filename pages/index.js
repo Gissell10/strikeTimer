@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/home.module.css";
 import { Icon } from "@iconify/react";
-import About from "./About";
+import StrikeTimer from "../components/StrikeTimer";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
           <span>Strike</span> Timer
         </h1>
 
-        <About />
+        <StrikeTimer />
       </main>
 
       <footer>

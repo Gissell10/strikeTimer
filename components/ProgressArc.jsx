@@ -1,25 +1,27 @@
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import styles from "../styles/home.module.css";
 
-export default function ProgressArc({ percentage, text }) {
-  const pathworkColor = "#3e4dc7";
-  const tailWorkColor = "#e2e0eadb";
-  const breakColor = "rgb(62, 199, 90)";
-  const tailBreakColor = "rgba(227, 236, 229, 0.77)";
-
-  console.log(percentage);
-
+export default function ProgressArc({
+  percentage,
+  text,
+  pathColor,
+  trailColor,
+  textColor,
+}) {
   return (
-    <div style={{ width: 200, height: 200 }}>
-      <CircularProgressbar
-        value={percentage}
-        text={text}
-        styles={buildStyles({
-          pathColor: "#3e4dc7",
-          trailColor: "#e2e0eadb",
-          textColor: "#3e4dc7",
-        })}
-      />
+    <div className={styles.timerContainer}>
+      <div className={styles.timer}>
+        <CircularProgressbar
+          value={percentage}
+          text={text}
+          styles={buildStyles({
+            pathColor,
+            trailColor,
+            textColor,
+          })}
+        />
+      </div>
     </div>
   );
 }
