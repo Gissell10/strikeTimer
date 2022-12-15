@@ -1,6 +1,6 @@
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import styles from "../styles/home.module.css";
+import styles from "./home.module.css";
 
 export default function ProgressArc({
   percentage,

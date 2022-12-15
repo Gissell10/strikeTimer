@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/home.module.css";
+import styles from "./home.module.css";
 import ProgressArc from "./ProgressArc";
 import { Icon } from "@iconify/react";
 
