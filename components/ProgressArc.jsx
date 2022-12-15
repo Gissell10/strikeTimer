@@ -1,6 +1,5 @@
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import BackButton from "./BackButton";
 
 export default function ProgressArc({ percentage, text }) {
   const pathworkColor = "#3e4dc7";
@@ -21,7 +20,6 @@ export default function ProgressArc({ percentage, text }) {
           textColor: "#3e4dc7",
         })}
       />
-      <BackButton />
     </div>
   );
 }

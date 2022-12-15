@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../styles/home.module.css";
 
 export default function TimeForm(props) {
   const onTrigger = (e) => {
@@ -16,40 +17,73 @@ export default function TimeForm(props) {
     props.timeSelected({ workTime: work, breakTime: breaks, rounds: rounds });
   };
   return (
-    <div>
+    <div className={styles.timeForm}>
       <form onSubmit={onTrigger}>
-        <label>Wort Time</label>
-        <label>Minutes</label>
-        <input
-          type="number"
-          min="0"
-          max="60"
-          name="minsWork"
-          defaultValue="0"
-        />
-        <label>Seconds</label>
-        <input type="number" min="0" max="59" name="secWork" defaultValue="0" />
-        <label>break Time</label>
-        <label>Minutes</label>
-        <input
-          type="number"
-          min="0"
-          max="60"
-          name="minBreak"
-          defaultValue="0"
-        />
-        <label>Seconds</label>
-        <input
-          type="number"
-          min="0"
-          max="59"
-          name="secBreak"
-          defaultValue="0"
-        />
-        <label>Rounds</label>
-        <input type="number" min="0" max="10" name="rounds" defaultValue="1" />
+        <p>Wort Time</p>
+        <div className={styles.timers}>
+          <div>
+            <label>Minutes</label>
+            <input
+              type="number"
+              min="0"
+              max="60"
+              name="minsWork"
+              defaultValue="0"
+            />
+          </div>
 
-        <button type="submit">Start</button>
+          <div>
+            <label>Seconds</label>
+            <input
+              type="number"
+              min="0"
+              max="59"
+              name="secWork"
+              defaultValue="0"
+            />
+          </div>
+        </div>
+
+        <p>Break Time</p>
+
+        <div className={styles.timers}>
+          <div>
+            <label>Minutes</label>
+            <input
+              type="number"
+              min="0"
+              max="60"
+              name="minBreak"
+              defaultValue="0"
+            />
+          </div>
+
+          <div>
+            <label>Seconds</label>
+            <input
+              type="number"
+              min="0"
+              max="59"
+              name="secBreak"
+              defaultValue="0"
+            />
+          </div>
+        </div>
+        <p>Rounds</p>
+        <div className={styles.timers}>
+          <label> # Rounds</label>
+          <input
+            type="number"
+            min="0"
+            max="10"
+            name="rounds"
+            defaultValue="1"
+          />
+
+          <button type="submit" className={styles.btnSubmit}>
+            Go!
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -5,7 +5,7 @@ import WorkoutClock from "../core/WorkoutClock";
 import TimeForm from "../components/TimeForm";
 
 export default function About() {
-  const [timer, setTimer] = useState(new WorkoutClock(10, 10, 10));
+  const [timer, setTimer] = useState(new WorkoutClock(1, 10, 10));
 
   const timeSelected = (timeFormData) => {
     const { workTime, breakTime, rounds } = timeFormData;

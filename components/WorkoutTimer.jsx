@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-
+import styles from "../styles/home.module.css";
 import ProgressArc from "./ProgressArc";
+import { Icon } from "@iconify/react";
 
 export default function WorkoutTimer({ timer }) {
   const [isActive, setIsActive] = useState(false);
@@ -51,10 +52,7 @@ export default function WorkoutTimer({ timer }) {
   const breakSec = parseInt(breakTime % 60);
   console.log(initialClockState);
   return (
-    <div>
-      <h1>
-        work min {workMin} - sec {workSec}: Break min {breakMin}- sec {breakSec}
-      </h1>
+    <div className={styles.workoutTimer}>
       <div
         style={{
           display: "flex",
@@ -71,13 +69,17 @@ export default function WorkoutTimer({ timer }) {
         />
       </div>
 
-      <span>number of rounds : {rounds}</span>
+      <p className={styles.rounds}> {rounds} more rounds remaining </p>
       <button
+        className={styles.iconPause}
         onClick={() => {
           setIsActive(!isActive);
         }}
       >
-        go
+        <Icon
+          className={styles.iconPause}
+          icon="heroicons:play-pause-20-solid"
+        />
       </button>
     </div>
   );
