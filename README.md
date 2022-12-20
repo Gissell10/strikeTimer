@@ -6,7 +6,7 @@
 
 # Strike Timer 
 
-Is a Frontend app that allow the user to set up work and break time and the numbrer of rounds, the work time is show on green an the rest time on blue.
+Is a Front-end app that allows the user to set up work and break time and the number of rounds, the work time is shown in green and the rest time in blue.
 
 # Technologies that I used
 
