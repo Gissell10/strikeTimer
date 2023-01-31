@@ -19,7 +19,7 @@ export default function TimeForm(props) {
   return (
     <div className={styles.timeForm}>
       <form onSubmit={onTrigger}>
-        <p>Wort Time</p>
+        <p>Work Time</p>
         <div className={styles.timers}>
           <div>
             <label>Minutes</label>
@@ -44,7 +44,7 @@ export default function TimeForm(props) {
           </div>
         </div>
 
-        <p>Break Time</p>
+        <p>Rest Time</p>
 
         <div className={styles.timers}>
           <div>
@@ -70,15 +70,17 @@ export default function TimeForm(props) {
           </div>
         </div>
         <p>Rounds</p>
-        <div>
-          <label> # Rounds</label>
-          <input
-            type="number"
-            min="0"
-            max="10"
-            name="rounds"
-            defaultValue="1"
-          />
+        <div className={styles.timers}>
+          <div>
+            <label> # Rounds</label>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              name="rounds"
+              defaultValue="1"
+            />
+          </div>
 
           <button type="submit" className={styles.btnSubmit}>
             Go!

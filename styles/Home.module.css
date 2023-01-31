@@ -103,8 +103,12 @@
 
 @media (max-width: 350px) {
   .grid {
-    width: 100%;
+    width: 60%;
     flex-direction: column;
+  }
+  .brand {
+    font-size: 3rem;
+    justify-content: center;
   }
   .container {
     min-height: 40vh;

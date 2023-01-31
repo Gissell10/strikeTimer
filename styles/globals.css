@@ -108,3 +108,17 @@ footer {
     padding: 10px 30px;
   }
 }
+
+@media (max-width: 350px) {
+  input {
+    font-size: 15px;
+    width: 100px;
+    margin: 0;
+  }
+  form {
+    padding: 2rem 0;
+  }
+  button {
+    transform: translateY(13px);
+  }
+}

@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
+  justify-content: center;
 }
 
 .timers {
@@ -94,25 +95,38 @@
   position: relative;
   border-radius: 50%;
 }
+@media (max-width: 350px) {
+  .grid {
+    width: 60%;
+    flex-direction: column;
+  }
+  .timeForm {
+    margin: 20px 30px 30px 30px;
+    padding: 0 3em 0 3em;
+  }
+
+  .brand {
+    font-size: 2rem;
+  }
+  .container {
+    min-height: 30vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    margin: 2rem;
+  }
+  .timers {
+    gap: 5px;
+  }
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
-  }
-}
-
-@media (max-width: 350px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-  .container {
-    min-height: 40vh;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 
