@@ -19,7 +19,7 @@
 }
 .brand {
   color: #fff;
-  font-size: 96px;
+  font-size: 9rem;
   font-family: oswald;
   font-weight: 500;
   margin-bottom: 80px;
@@ -100,10 +100,22 @@
     flex-direction: column;
   }
 }
+@media only screen and (min-width: 350px) and (max-width: 600px) {
+  .brand {
+    font-size: 5rem;
+  }
+  .grid {
+    min-width: 60%;
+    flex-direction: column;
+  }
+  .timeForm {
+    margin: 20px 30px 20px 40px;
+  }
+}
 
 @media (max-width: 350px) {
   .grid {
-    width: 60%;
+    min-width: 60%;
     flex-direction: column;
   }
   .brand {
@@ -117,6 +129,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .timeForm {
+    margin: 20px 30px 20px 80px;
   }
 }
 
